@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Pexels</title>
+  <title>Pexels Replica</title>
+  <link rel="icon" type="image/x-icon" href="images/pexels-favicon.png">
+  <meta name="viewport" content="width=device-width initial-scale=1">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Dancing+Script&family=Gloria+Hallelujah&family=Oswald:wght@400;500&family=Palanquin+Dark&family=Roboto+Condensed:ital,wght@0,400;1,700&family=Roboto:wght@400;500;900&family=Ubuntu+Condensed&display=swap');
   </style>
@@ -18,55 +20,36 @@
       font-family: Palanquin Dark;
     }
 
-    .header {
-      position: absolute;
-      /* height: 70%; */
-      /* It can be anything you need */
-      width: 100%;
-      top: 0;
+    .all-container {
+      height: 100vh;
     }
 
+    .header {
+      position: relative;
+      width: 100%;
+      padding-bottom: 50px;
+    }
 
     .slide {
       animation: imageAnimation 30s linear infinite 0s;
       backface-visibility: hidden;
       background-size: cover;
+      background-repeat: no-repeat;
       background-position: center center;
       color: transparent;
       height: 100%;
-      /* left: 0px; */
       opacity: 0;
+      filter: brightness(60%);
       position: absolute;
       top: 0px;
+      right: 0px;
       width: 100%;
       z-index: 1;
-      /* background-color: black; */
-
+      bottom: 50%;
+      left: 0%;
+      transform: translate(0%, 0%);
     }
 
-    .header>.slide:nth-child(1) {
-      background-image: url('images/pexels-tim-mossholder-974316.jpg');
-    }
-
-    .header>.slide:nth-child(2) {
-      animation-delay: 6s;
-      background-image: url('images/pexels-andré-cook-131727.jpg');
-    }
-
-    .header>.slide:nth-child(3) {
-      animation-delay: 12s;
-      background-image: url('images/pexels-susanne-jutzeler-sujufoto-1363329.jpg');
-    }
-
-    .header>.slide:nth-child(4) {
-      animation-delay: 18s;
-      background-image: url('images/pexels-sonic-12102873.jpg');
-    }
-
-    .header>.slide:nth-child(5) {
-      animation-delay: 24s;
-      background-image: url('images/pexels-quang-nguyen-vinh-6877970.jpg');
-    }
 
     @keyframes imageAnimation {
       0% {
@@ -76,47 +59,51 @@
 
       8% {
         animation-timing-function: ease-out;
-        opacity: 1;
+        opacity: .9;
       }
 
       17% {
-        opacity: 1;
+        opacity: .8;
       }
 
       25% {
-        opacity: 0;
+        opacity: 0.5;
       }
 
       100% {
-        opacity: 0;
+        opacity: .1;
       }
     }
 
     .logo {
-      height: 100px;
-      width: 100px;
-      margin: 0 0 0 50px;
+      height: 50px;
+      width: 50px;
+      margin: 0 0 0 20px;
       object-fit: cover;
       object-position: 0% 50%;
       border-radius: 15%;
-
+      position: relative;
     }
-
-
 
     h1,
     h5 {
       color: white;
-      margin: 30px 0;
+      margin: 20px 0;
     }
 
     h1 {
-      font-size: 95px;
-      line-height: 100px;
+      font-size: 33px;
+      line-height: 35px;
+      letter-spacing: -.02em;
     }
 
     h5 {
-      font-size: 45px;
+      font-size: 16px;
+    }
+
+    .trending,
+    .credits span {
+      color: #e0e0e0;
     }
 
     .top-left,
@@ -127,11 +114,10 @@
     }
 
     .center {
-      margin: 15% auto 15% auto;
+      margin: 5% auto 5% auto;
       text-align: left;
       width: 90%;
-      max-width: 991px;
-
+      max-width: 650px;
     }
 
     a {
@@ -166,7 +152,6 @@
     .offcanvas-header,
     .offcanvas-body {
       background: rgba(0, 0, 0, 1);
-      /* align-items: center !important; */
     }
 
     .mobile-nav {
@@ -179,51 +164,47 @@
     }
 
     .navbar {
-      z-index: 4;
-      align-items: center;
-      margin-top: 30px;
-    }
-.navbar-toggler{
-  border: none !important;
-}
-    .mobile-menu {
-      z-index: 9;
-    }
-
-    .navbar {
+      z-index: 3;
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
     }
-.navbar-brand{
-  padding:0 !important;
 
-}
-    .nav-item {
-      align-self: center;
+    .navbar-toggler {
+      border: none !important;
     }
 
+    .mobile-menu {
+      z-index: 9;
+    }
+
+
+    .navbar-brand {
+      padding: 0 !important;
+    }
+
+    /* .nav-item {
+      align-self: center;
+    } */
+
     .upload-btn {
-      margin-right: 50px;
+      margin-right: 60px;
     }
 
     .fa-bars {
-      /* height: 100px;
-      width: 100px; */
-font-size: 70px;
+      font-size: 30px;
       color: rgba(255, 255, 255, 1);
-      margin-right: 50px;
+      margin-right: 20px;
     }
 
-    .submit {
-      margin: 55px 0;
+
+    .input {
+      background-color: white;
+      color: #808080;
     }
-.input{
-  background-color: white;
-  color: #808080;
-}
+
     .fa-magnifying-glass {
-      font-size: 55px;
+      font-size: 20px;
     }
 
     .form-control {
@@ -231,46 +212,263 @@ font-size: 70px;
       font-size: 20px;
     }
 
-
+    /* mobile view */
     .photos {
-      top: 70%;
-      margin: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      position: absolute;
-      height: 100vh;
-      flex-basis: 50%;
-      flex-grow: 1;
-      flex-shrink: 1;
-    }
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(auto-fit, 150px);
+      width: 100%;
+      padding: 20px;
+      position: relative;
+      }
 
     .photo-div {
-      /* width: 150px; */
+      width: auto;
       height: auto;
       object-fit: cover;
-      margin: 10px;
     }
 
-.short-menu{
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
+    .photo-div>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-@media (min-width: 400px){
-  h1 {
-    font-size: 40px;
-    line-height: 40px;
-  }
+    .photo-div>a>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-  h5 {
-    font-size: 20px;
-  }
-}
+    .photo-div>a {
+      margin: 0;
+    }
+
+    .pic-top-icons {
+      opacity: 0;
+      position: relative;
+      bottom: 100%;
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .pic-bottom-icons {
+      opacity: 0;
+      position: relative;
+      bottom: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .fa-file-arrow-down,
+    fa-bookmark,
+    fa-heart {
+      color: white !important;
+    }
+
+    .photographer-url {
+      display: none;
+    }
+
+    /* mobile view */
+    .photo-div:nth-child(2) {
+      grid-column: 2 / 2;
+      grid-row: 1 / span 2;
+    }
+
+    .photo-div:nth-child(4) {
+      grid-column: 1 / 1;
+      grid-row: 3 / span 2;
+    }
+
+    .photo-div:nth-child(6) {
+      grid-column: 2 / 2;
+      grid-row: 5 / span 2;
+    }
+
+    .photo-div:nth-child(10) {
+      grid-column: 1 / 1;
+      grid-row: 7 / span 2;
+    }
+
+    .photo-div:nth-child(14) {
+      grid-column: 2 / 2;
+      grid-row: 9 / span 2;
+    }
+
+    .photo-div:nth-child(19) {
+      grid-column: 2 / 2;
+      grid-row: 12 / span 2;
+    }
+
+    .short-menu {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .middle-menu {
+      position: relative;
+      transform: translate(0%, 5%);
+      z-index: 2;
+      margin: 0 20px;
+    }
+
+
+
+    .middle-menu-top {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 1;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+
+    .middle-menu-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .middle-menu-bottom>a {
+      flex-shrink: 0;
+      margin: 0 !important;
+    }
+
+    .middle-menu h5 {
+      color: #4a4a4a;
+      font-size: 16px;
+    }
+
+    .home-button {
+      background-color: #0011ff;
+      border-radius: 42px;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #0011ff;
+
+    }
+
+    .trending-btn {
+      -webkit-border-radius: 14;
+      -moz-border-radius: 14;
+      border-radius: 14px;
+      font-family: Arial;
+      color: #000000;
+      font-size: 16px;
+      background: #ffffff;
+      padding: 10px 20px 10px 20px;
+      border: solid #1f628d 1px;
+      text-decoration: none;
+    }
+
+    .trending-btn:hover {
+      background: #ffffff;
+      text-decoration: none;
+    }
+
+    .photo-title {
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center justify-content: space-between;
+    }
+
+    .credits {
+      position: absolute;
+      right: 1%;
+      padding-top: 15px;
+      color: white;
+      z-index: 2;
+    }
+
+    .credits a {
+      font-size: 14px;
+    }
+
+    /* Off Canvas Menu */
+    .offcanvas-title,
+    .nav-desktop {
+      display: none;
+    }
+
+    .offcanvas-header .navbar-brand .logo {
+      margin-left: 0;
+    }
+
+    .offcanvas-header .submit-mini .mb-3 {
+      margin: 0 !important;
+    }
+
+    .offcanvas-menu {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .offcanvas-menu>li {
+      font-size: 24px;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: space-between;
+      font-size: 36px;
+      color: white;
+    }
+
+    .btn-dark {
+      font-size: 24px !important;
+      --bs-btn-bg: black !important;
+      --bs-btn-border-color: black !important;
+    }
+
+    @media (min-width: 400px) {
+      .middle-menu-top {
+        justify-content: center;
+      }
+    }
+
+    @media(max-width:650px) {
+    .pic-bottom-icons {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: 650px) {
+
+      .photo-div:hover .pic-top-icons,
+      .photo-div:hover .pic-bottom-icons {
+        opacity: 1;
+      }
+
+      .photo-div:hover .photographer-url {
+        display: block;
+        color: white;
+      }
+    }
+
     @media (min-width: 768px) {
-      .offcanvas-body {
-        background: rgba(0, 0, 0, 0);
+      .offcanvas-menu {
+        display: none;
+      }
+
+      .nav-desktop {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .nav-item {
+        align-self: center;
       }
 
       .upload {
@@ -284,109 +482,350 @@ font-size: 70px;
       }
 
 
+      .photos {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto-fit, 300px);
+      }
+
+      .photo-div:nth-child(2) {
+        grid-row: 1 / span 2;
+        grid-column: 2 / 2;
+      }
+
+
+      .photo-div:nth-child(5) {
+        grid-row: 2 / span 3;
+        grid-column: 3 / 3;
+      }
+
+      .photo-div:nth-child(6) {
+        grid-column: 1 / 1;
+        grid-row: 3 / span 2;
+      }
+
+      .photo-div:nth-child(8) {
+        grid-column: 1 / 1;
+        grid-row: 5 / span 2;
+      }
+
+      .photo-div:nth-child(9) {
+        grid-row: 4 / span 2;
+        grid-column: 2 / 2;
+      }
+
+      .photo-div:nth-child(11) {
+        grid-column: 3 / 3;
+        grid-row: 5 / span 2;
+      }
+
+      .photo-div:nth-child(12) {
+        grid-column: 2 / 2;
+        grid-row: 6 / span 2;
+      }
+
+      .photo-div:nth-child(13) {
+        grid-column: 3 / 3;
+        grid-row: 7 / span 2;
+      }
+
+      .photo-div:nth-child(14) {
+        grid-column: 1 / 1;
+        grid-row: 7 / span 2;
+      }
+
+
+      .photo-div:nth-child(19) {
+        grid-column: 3 / 3;
+        grid-row: 9 / span 2;
+      }
+
+
     }
   </style>
 </head>
 
 <body>
-  <!-- <div class="all-container"> -->
+  <div class="all-container">
 
 
-  <div class="header">
-
-
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-    <div class="slide"></div>
-
-
-    <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand" href="#"><img class="logo" src="images\pexels-white.png" alt="pexels logo"></a>
-      <div class="short-menu">
-        <button type="button" class="btn btn-light upload" style="--bs-btn-padding-y: 1.25rem; --bs-btn-padding-x: 3rem; --bs-btn-font-size: 3rem;">
-          Upload
-        </button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<i class="fa-solid fa-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
-          <!-- <span class="navbar-toggler-icon"
-            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></span> -->
-        </button>
+    <div class="header">
+      <div class="sliders">
       </div>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-          <button type="button" class="btn btn-light" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="explore" href="#">Explore<i class="fa-solid fa-angle-down"></i></a>
-            </li>
 
-            <li class="nav-item">
-              <a class="bell" href="#"><i class="fa-solid fa-bell"></i></a>
-            </li>
-
-            <li class="nav-item"> <a class="user" href="#"><i class="fa-solid fa-circle-user"></i><i class="fa-solid fa-angle-down"></i></a>
-            </li>
-            <li class="nav-item"> <button type="button" class="btn btn-light upload-btn" style="--bs-btn-padding-y: .75rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1.25rem;">
-                Upload
-              </button>
-            </li>
-          </ul>
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a onclick="reset()" class="navbar-brand" href="#"><img class="logo" src="images\pexels-white.png" alt="pexels logo"></a>
+        <div class="short-menu">
+          <button type="button" class="btn btn-light upload" style="--bs-btn-padding-y: .75rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1rem;">
+            Upload
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+          </button>
         </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <a onclick="reset()" class="navbar-brand" href="#"><img class="logo" src="images\pexels-white.png" alt="pexels logo"></a>
+            <form class="submit-mini" action="index.html" method="post">
+              <div class="input-group mb-3">
+                <input id="" type="text" class="form-control" placeholder="Search for free photos" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <button type="submit" class="input-group-text input submit-button" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </form>
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+          </div>
+          <div class="nav-desktop">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="explore" href="#">Explore<i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="licence" href="#">License</a>
+              </li>
+              <li class="nav-item">
+                <a class="bell" href="#"><i class="fa-solid fa-bell"></i></a>
+              </li>
+
+              <li class="nav-item"> <a class="user" href="#"><i class="fa-solid fa-circle-user"></i><i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <li class="nav-item"> <button type="button" class="btn btn-light upload-btn" style="--bs-btn-padding-y: .75rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1.25rem;">
+                  Upload
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="offcanvas-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Discover Photos</a></li>
+              <li><a href="#">Popular Searches</a></li>
+              <li><a href="#">Free Videos</a></li>
+              <li><a href="#">Challenges</a></li>
+              <li><a href="#">Leaderboard</a></li>
+              <li><a href="#">Pexels Blog</a></li>
+              <li>
+                <hr>
+              </li>
+              <li><a href="#">Your Profile</a></li>
+              <li><a href="#">Change Language <i class="fa-solid fa-flag-usa"></i></a></li>
+              <li><a href="#">Upload</a></li>
+              <li><a href="#">License</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Logout</a></li>
+              <li>
+                <hr>
+              </li>
+              <li><a href="#">Apps & Plugins</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Imprint & Terms</a></li>
+              <li>
+                <hr>
+              </li>
+              <div class="social-media">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-pinterest"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="center">
+        <h1>The best free stock photos, royalty free images & videos shared by creators.</h1>
+        <form class="submit" action="index.html" method="post">
+          <div class="input-group mb-3">
+            <input id="search-bar" type="text" class="form-control" placeholder="Search for free photos" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            <button type="submit" class="input-group-text input submit-button" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </form>
+        <h5><span class="trending">Trending:</span> computer, money, travel, water, autumn</h5>
       </div>
-    </nav>
 
+      <div class="credits">
+      </div>
 
-    <div class="center">
-      <h1>The best free stock photos, royalty free images & videos shared by creators.</h1>
-      <form class="submit" action="index.html" method="post">
-        <div class="input-group input-group-lg">
-          <input type="text" class="form-control" placeholder="Search for free photos" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-          <span class="input-group-text input" id="inputGroup-sizing-lg"><i class="fa-solid fa-magnifying-glass"></i></span>
-        </div>
-      </form>
-      <h5>Trending: computer, money, travel, water, autumn</h5>
     </div>
+
+
+    <div class="middle-menu">
+      <div class="middle-menu-top">
+        <a href="#" class="home-button">Home</a>
+        <a href="#">
+          <h5>Videos</h5>
+        </a>
+        <a href="#">
+          <h5>Leaderboard</h5>
+        </a>
+        <a href="#">
+          <h5>Challenges</h5>
+        </a>
+      </div>
+      <div class="middle-menu-bottom">
+        <h2>Free Stock Photos</h2>
+        <a href="#" class="trending-btn">Trending<i class="fa-solid fa-angle-down"></i></a>
+      </div>
+    </div>
+
+
+
+    <div class="photos">
+    </div>
+
   </div>
-  <div class="photos">
-  </div>
+
   <script type="text/javascript">
-    // fetch Pexels API
-    const pexels = async () => {
-    //const data = await (await fetch(`https://api.pexels.com/v1/curated?per_page=20`, {
-    // const data = await (await fetch(`https://api.pexels.com/v1/search?query=people`, {
-    headers: {
-    Authorization: '563492ad6f91700001000001a640a68e65cd4baeb639a024d54fc829'
+    //Fetch API for Trending Photos
+    const pexels2 = async () => {
+      const data = await (await fetch(`https://api.pexels.com/v1/curated?per_page=20`, {
+        headers: {
+          Authorization: '563492ad6f91700001000001a640a68e65cd4baeb639a024d54fc829'
+        }
+      })).json()
+      return data
     }
-    })).json()
-    return data
-    }
 
-    pexels()
-      .then(data => console.log(data.photos))
-
-
-    pexels()
+    // Random pics pre-populate the page
+    pexels2()
       .then(data => response(data))
-
+    pexels2()
+      .then(data => console.log(data.photos))
+    let sliders = document.querySelector(".sliders")
+    let credits = document.querySelector(".credits")
     let photos = document.querySelector('.photos')
-    // photos.innerHTML = ""
+
+
     let response = data => {
       let photo = data.photos.map(photo => {
-        return photo.src.medium
+        return photo.src.large
+      })
+      let name = data.photos.map(name => {
+        return name.photographer
+      })
+      let original = data.photos.map(original => {
+        return original.src.original
+      })
+      let url = data.photos.map(url => {
+        return url.photographer_url
       })
 
-      photo.forEach((photo) => {
-        console.log(photo)
+      // console.log(photo)
+
+      //Carousel Header
+      sliders.innerHTML = ""
+      credits.innerHTML = ""
+      const slide = document.createElement('div')
+      slide.className = 'slide';
+      slide.style.backgroundImage = `url(${photo[0]})`
+      credits.innerHTML = `<a href="${url[0]}"><span>Photo by </span>${name[0]}</a>`
+      sliders.appendChild(slide)
+
+      const interval = setInterval(function() {
+        startCarousel();
+      }, 6000)
+      var index = 1;
+      startCarousel = () => {
+        sliders.innerHTML = ""
+        credits.innerHTML = ""
+        const slide = document.createElement('div')
+        slide.className = 'slide';
+        slide.style.backgroundImage = `url(${photo[index]})`
+        credits.innerHTML = `<a href="${url[index]}"><span>Photo by </span>${name[index]}</a>`
+        index++;
+        if (index >= 19) index = 0
+        sliders.appendChild(slide)
+        console.log(photo[19])
+      }
+
+      //Display trending photos at bottom of page
+        for (var i = 0; i < photo.length; i++) {
         const div = document.createElement('div')
         div.className = 'photo-div';
-        div.innerHTML = `<img src=${photo}>`
+        div.innerHTML = `<a class="original-pic-url" href="${original[i]}"><img src=${photo[i]}></a>
+        <div class = "pic-top-icons">
+        <a href="#"><i class="fa-solid fa-bookmark"></i></a>
+        <a href="#"><i class="fa-solid fa-heart"></i></a>
+        </div>
+        <div class="pic-bottom-icons">
+        <a href="${url[i]}"><span class="photographer-url">${name[i]}</span></a>
+        <a href="#"><i class="fa-solid fa-file-arrow-down"></i></a>
+        </div>`
         photos.appendChild(div)
-      })
+        // console.log(index)
+      }
+
+    }
+
+
+    // Enter a keyword and search for new pics
+
+    // fetch Pexels Search API
+    const pexels = async () => {
+      const keywords = document.querySelector('#search-bar').value;
+      const data = await (await fetch(`https://api.pexels.com/v1/search?query=${keywords}?per_page=15`, {
+        headers: {
+          Authorization: '563492ad6f91700001000001a640a68e65cd4baeb639a024d54fc829'
+        }
+      })).json()
+      return data
+    }
+
+    let searchForm = document.querySelector('.submit')
+    searchForm.addEventListener('submit', function(e) {
+      e.preventDefault()
+
+      pexels()
+        .then(data => response(data))
+
+      let photos = document.querySelector('.photos')
+      photos.innerHTML = ""
+      
+      let response = data => {
+        let photo = data.photos.map(photo => {
+          return photo.src.large
+        })
+        let name = data.photos.map(name => {
+          return name.photographer
+        })
+        let original = data.photos.map(original => {
+          return original.src.original
+        })
+        let url = data.photos.map(url => {
+          return url.photographer_url
+        })
+
+//Populate photos
+          for (var i = 0; i < photo.length; i++) {
+          const div = document.createElement('div')
+          div.className = 'photo-div';
+          div.innerHTML = `<a class="original-pic-url" href="${original[i]}"><img src=${photo[i]}></a>
+          <div class = "pic-top-icons">
+          <a href="#"><i class="fa-solid fa-bookmark"></i></a>
+          <a href="#"><i class="fa-solid fa-heart"></i></a>
+          </div>
+          <div class="pic-bottom-icons">
+          <a href="${url[i]}"><span class="photographer-url">${name[i]}</span></a>
+          <a href="#"><i class="fa-solid fa-file-arrow-down"></i></a>
+          </div>`
+          photos.appendChild(div)
+          // console.log(index)
+        }
+      }
+    })
+
+    //Logo click resets search field and reloads page
+    function reset() {
+      searchForm.reset()
+      photos.innerHTML = ""
+      location.reload();
     }
   </script>
 </body>
