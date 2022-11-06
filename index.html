@@ -770,7 +770,7 @@
     // fetch Pexels Search API
     const pexels = async () => {
       const keywords = document.querySelector('#search-bar').value;
-      const data = await (await fetch(`https://api.pexels.com/v1/search?query=${keywords}&per_page=80`, {
+      const data = await (await fetch(`https://api.pexels.com/v1/search?query=${keywords}&per_page=20`, {
         headers: {
           Authorization: '563492ad6f91700001000001a640a68e65cd4baeb639a024d54fc829'
         }
