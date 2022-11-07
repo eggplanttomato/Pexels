@@ -102,23 +102,26 @@
     }
 
 
-    .trending,.fa-circle,
+    .trending,
+    .fa-circle,
     .credits span {
       color: #e0e0e0;
     }
-.fa-circle{
-  position: relative;
-  top:3px;
- left:-10px;
- color: #e0e0e0;
- opacity: .3;
-}
-.fa-ellipsis{
-  position: relative;
-  top:2px;
-  left:-27px;
-  font-size: 16px;
-}
+
+    .fa-circle {
+      position: relative;
+      top: 3px;
+      left: -10px;
+      color: #e0e0e0;
+      opacity: .3;
+    }
+
+    .fa-ellipsis {
+      position: relative;
+      top: 2px;
+      left: -27px;
+      font-size: 16px;
+    }
 
     .top-left,
     .top-right,
@@ -266,6 +269,9 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      background: rgb(2,0,36);
+      background: linear-gradient(180deg, rgba(2, 0, 36, 0.2) 0%, rgba(9, 9, 121, 0.1507072829131656) 25%, rgba(240, 242, 242, .001) 100%);
+      background-blend-mode: darken;
     }
 
     .pic-bottom-icons {
@@ -275,6 +281,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: rgb(2, 0, 36);
+      background: linear-gradient(360deg, rgba(2, 0, 36, 0.31556372549019607) 0%, rgba(9, 9, 121, 0.08307072829131656) 35%, rgba(240, 242, 242, .001) 100%);
+      background-blend-mode: darken;
     }
 
     .fa-file-arrow-down,
@@ -666,7 +675,7 @@
           </div>
         </form>
         <h5><span class="trending">Trending:</span> computer, money, travel, water, autumn <span><a href="#"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-ellipsis"></i></a></span></h5>
-        </div>
+      </div>
 
       <div class="credits">
       </div>
